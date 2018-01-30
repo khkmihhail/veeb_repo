@@ -24,7 +24,7 @@ print("<br>45 / 32 = ").(float)(45/32);
 
 $eesNimi = "Mihhail"; // str, eesnimi
 $pereNimi = "Matisinets"; // str, perenimi
-$bussiNumber = "4"; //int, bussi number
+$bussiNumber = "4"; //int, bussi number 4
 
 print("<br>$eesNimi $pereNimi sõidab bussiga $bussiNumber.");
 
