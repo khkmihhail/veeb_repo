@@ -53,6 +53,13 @@ if($ilmValjas == "sajab lund") {
     print("Pole mõtet...");
 }
 
+print("<br>");
+$järjend = array(3, 3, 4, 5, 6, 7);
+
+foreach ( $järjend as $val ) {
+    print("Value is $val <br>");
+}
+
 
 ?>
 </body>
