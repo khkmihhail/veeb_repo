@@ -40,8 +40,19 @@ while( $i < 10) {
     $num--;
     $i++;
 }
+echo ("i = $i and num = $num");
 
-echo ("i = $i and num = $num")
+print("</br>");
+print("If laused..."); // loome if laused
+
+$ilmValjas = "sajab lund";
+
+if($ilmValjas == "sajab lund") {
+    print("<br>Tuleb sauna minna");
+} else {
+    print("Pole mõtet...");
+}
+
 
 ?>
 </body>
