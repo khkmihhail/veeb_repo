@@ -21,6 +21,23 @@ function Hind($taishind, $sooduskart, $kasOledOpilane)
     return $soodustus;
 }
 
+//func for forms
+//call html from vorm.html ja show
+function loeVormFailist($failnimi){
+    //kontrollime kas fail olemas
+    if (file_exists($failnimi) and is_file($failnimi) and is_readable($failnimi)){
+        //loeb fail
+        $fp = fopen($failnimi, 'r');
+        $sisu = fread($fp, filesize($failnimi));//loeme faili sisu
+        $fp = fclose($fp); //paneme ühendus failiga kinni
+
+    } else {
+        printf('<br>Probleem on %s', $failnimi);
+    };
+    print ($sisu);
+};
+
+
 
 
 ?>
