@@ -33,6 +33,26 @@ $kasutajad = array(
     array(true, false), //õpetajad
     array(false, false) //külalised
 );
+//dictionary loomine
+//'key' => value
+$kasutajad2 = array(
+  array(
+      'roll'=>'õpilane',
+      'soodus' => true,
+      'opilaskaart'=>true
+  ),
+  array(
+      'roll'=>'õpetaja',
+      'soodus' => true,
+      'opilaskaart'=>false
+  ),
+  array(
+      'roll'=>'külaline',
+      'soodus' => false,
+      'opilaskaart'=>false
+  )
+);
+
 
 //Testid
 //func call
@@ -49,14 +69,18 @@ $a = Hind(2.65,$opetaja[0],$opetaja[1]);
 printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 
 print ("<br>");
-print ("<br/>Tsükklid testimine:");
+print ("<br/>For tsükkel testimine:");
 
 //loome foreach ja for trükkelid ja testime tabel.
+//for trükkel loomine
 for ($i =0; $i < count($kasutajad); $i++){
     $a = Hind(2.65, $kasutajad[$i][0], $kasutajad[$i][1]);
     printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 };
 
+print ("<br>");
+print ("<br/> Foreach tsükkel testimine:");
+//foreach trükkel rakendamine
 foreach ($kasutajad as $value) {
 
 };
