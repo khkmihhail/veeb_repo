@@ -37,17 +37,17 @@ $kasutajad = array(
 //'key' => value
 $kasutajad2 = array(
   array(
-      'roll'=>'õpilane',
+      'roll'=>'õpilasele',
       'soodus' => true,
       'opilaskaart'=>true
   ),
   array(
-      'roll'=>'õpetaja',
+      'roll'=>'õpetajale',
       'soodus' => true,
       'opilaskaart'=>false
   ),
   array(
-      'roll'=>'külaline',
+      'roll'=>'külalisele',
       'soodus' => false,
       'opilaskaart'=>false
   )
@@ -69,7 +69,7 @@ $a = Hind(2.65,$opetaja[0],$opetaja[1]);
 printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 
 print ("<br>");
-print ("<br/>For tsükkel testimine:");
+print ("<br/><b>For tsükkel testimine:</b>");
 
 //loome foreach ja for trükkelid ja testime tabel.
 //for trükkel loomine
@@ -79,10 +79,12 @@ for ($i =0; $i < count($kasutajad); $i++){
 };
 
 print ("<br>");
-print ("<br/> Foreach tsükkel testimine:");
+print ("<br/><b>Foreach tsükkel testimine:</b>");
 //foreach trükkel rakendamine
-foreach ($kasutajad as $value) {
-
+//
+foreach ($kasutajad2 as $kasutaja) {
+        $a = Hind(2.65, $kasutaja['soodus'], $kasutaja['opilaskaart']);
+        printf("<br>Hind sooduskaardi %s %.2f", $kasutaja['roll'],$a);
 };
 
 
