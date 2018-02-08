@@ -5,6 +5,11 @@
  * Date: 8.02.2018
  * Time: 10:24
  */
+//import functions from others files
+require_once 'functsions.php';
+
+
+
 //create a dictionary
 $menu = array(
     array(
