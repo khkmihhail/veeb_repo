@@ -20,15 +20,12 @@ function Hind($taishind, $sooduskart, $kasOledOpilane)
     return $soodustus;
 }
 //func call
-Hind()
+$a = Hind(2.65, true, true);
+echo "Hind õpilasele on $a";
 
 
-$soogihind = 2.55; // ahjuliha
-$i = 0;
-if($soogihind > 0 and $soodustusProts > 0 and $opilaseToetus > 0) {
-
-    $hindOpilastele = $soodustus - $opilaseToetus;
-    print("<br><h1>Söögi hind õpilasele $hindOpilastele</h1>");
-}
+//uurin string formateerimine
+$a = Hind(2.65,true,false);
+printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 
 ?>
