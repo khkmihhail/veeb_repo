@@ -19,13 +19,22 @@ function Hind($taishind, $sooduskart, $kasOledOpilane)
     }
     return $soodustus;
 }
+//loome massivi(arrays)
+//kasutame selleks kujul (sooduskart, kasOledOpilane)
+$opilane = array(true, true); //olemas soodus ja oled Õpilane
+$opetaja = array(true, false);
+$kulaline = array(false, false);
+
 //func call
 $a = Hind(2.65, true, true);
-echo "Hind õpilasele on $a";
-
-
+echo "<br>Hind õpilasele on $a";
 //uurin string formateerimine
 $a = Hind(2.65,true,false);
 printf("<br>Hind sooduskaardi omanikule %.2f", $a);
+//testin massivid
+$a = Hind(2.65,$opilane[0],$opilane[1]);
+printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 
+$a = Hind(2.65,$opetaja[0],$opetaja[1]);
+printf("<br>Hind sooduskaardi omanikule %.2f", $a);
 ?>
