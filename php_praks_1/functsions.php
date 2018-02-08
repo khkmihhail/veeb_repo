@@ -30,7 +30,6 @@ function loeVormFailist($failnimi){
         $fp = fopen($failnimi, 'r');
         $sisu = fread($fp, filesize($failnimi));//loeme faili sisu
         $fp = fclose($fp); //paneme ühendus failiga kinni
-
     } else {
         printf('<br>Probleem on %s', $failnimi);
     };

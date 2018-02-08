@@ -8,6 +8,8 @@
 //import functions from others files
 require_once 'functsions.php';
 
+//call html file
+loeVormFailist('vorm.html');
 
 
 //create a dictionary
