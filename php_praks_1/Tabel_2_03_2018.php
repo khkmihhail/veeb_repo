@@ -13,46 +13,40 @@ class Tabel{
 
     public function __construct($pealkirjad)
     {
-        $this ->pealkirjad = $pealkirjad;
-        $this ->veerguArv = count($pealkirjad);
+        $this->pealkirjad = $pealkirjad;
+        $this->veerguArv = count($pealkirjad);
 
     }
 
-    /*static*/ public function lisaRida($rida){
-        /*
-        if(count($rida) != $this ->veerguArv){
-            return false;
-        }
-        array_push($this->sisu, $rida);
-        return true;
-        */
-        (count($rida) != $this ->veerguArv) ? :
-            array_push($this->sisu, $rida);
+    public function lisaRida($rida){
+        //tegin ühes rea.
+        (count($rida) != $this->veerguArv) ? : array_push($this->sisu, $rida);
 
     }
-
-    /*static*/ public function printTabel(){
+    //tabeli printimine.
+    public function printTabel(){
         echo '<pre>';
+
         foreach ($this->pealkirjad as $pealkiri) {
-            printf('<b> %s </b>', $pealkiri);
+            printf('<td> %s </td>', $pealkiri);
         }
 
         echo "\n";
+
         foreach ($this->sisu as $rida){
             foreach ($rida as $reaEl){
                 printf( " %s ", $reaEl);
             }
             echo "\n";
         }
+
         echo '</pre>';
     }
 }
 
-
 $muTabel = new Tabel(array('w','e','r','t'));
 $muTabel->lisaRida(array(1, 4, 5,4));
 $muTabel->lisaRida(array(2, 3, 7,9));
-
 
 echo '<pre>';
 print_r($muTabel);
